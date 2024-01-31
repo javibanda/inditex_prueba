@@ -15,3 +15,8 @@ new files with the same name because we will overwrite your changes.
 * runnerStop.sh
 * src/test/java/com/inditex/zarachallenge/http/HttpJsonDynamicUnitTest.java
 * src/test/resources/testcases/http00.json
+git fetch origin
+
+
+git fetch origin
+
