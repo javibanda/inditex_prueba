@@ -1,8 +1,10 @@
 package com.inditex.zarachallenge.service;
 
+import com.inditex.zarachallenge.model.dto.ProductDTO;
+
 import java.util.List;
 
 public interface ProductService {
 
-    List<Long> getProducts(Integer productId);
+    List<ProductDTO> getSimilarProducts(Long productId);
 }

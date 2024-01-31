@@ -22,4 +22,6 @@ public class SizeProduct {
 
     private Timestamp lastUpdated;
 
+    private Long productId;
+
 }

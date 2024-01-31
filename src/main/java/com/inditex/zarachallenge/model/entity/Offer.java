@@ -21,4 +21,6 @@ public class Offer {
 
     private BigDecimal price;
 
+    private Long productId;
+
 }
