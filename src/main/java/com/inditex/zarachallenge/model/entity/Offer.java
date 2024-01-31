@@ -1,12 +1,16 @@
 package com.inditex.zarachallenge.model.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "OFFER")
+@Getter
+@Setter
 public class Offer {
 
     @Id
@@ -17,7 +21,4 @@ public class Offer {
 
     private BigDecimal price;
 
-    @ManyToOne
-    @JoinColumn(name = "PRODUCT_ID", nullable = false)
-    private Product product;
 }

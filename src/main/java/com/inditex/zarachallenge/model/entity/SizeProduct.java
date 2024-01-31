@@ -1,12 +1,16 @@
 package com.inditex.zarachallenge.model.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "SIZE")
-public class Size {
+@Setter
+@Getter
+public class SizeProduct {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +22,4 @@ public class Size {
 
     private Timestamp lastUpdated;
 
-    @ManyToOne
-    @JoinColumn(name = "PRODUCT_ID", nullable = false)
-    private Product product;
 }
