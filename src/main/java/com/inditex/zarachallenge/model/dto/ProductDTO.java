@@ -1,4 +1,4 @@
-package com.inditex.zarachallenge.infrastructure.model;
+package com.inditex.zarachallenge.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
