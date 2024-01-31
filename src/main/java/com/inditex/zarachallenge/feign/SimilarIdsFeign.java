@@ -13,5 +13,5 @@ import java.util.List;
 public interface SimilarIdsFeign {
 
     @RequestMapping(method = RequestMethod.GET, value = "/product/{id}/similarids")
-    List<Long> getSimilarProductIds(@PathVariable("id") int productId);
+    List<Long> getSimilarProductIds(@PathVariable("id") Long productId);
 }

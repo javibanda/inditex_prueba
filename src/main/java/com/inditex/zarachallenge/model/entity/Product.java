@@ -15,4 +15,8 @@ public class Product {
 
     private String name;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ID", referencedColumnName = "sizeId")
+    private SizeProduct size;
+
 }

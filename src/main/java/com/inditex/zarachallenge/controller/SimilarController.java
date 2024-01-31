@@ -15,7 +15,8 @@ public class SimilarController {
     private final ProductService productService;
     @GetMapping("/product/{productId}/similar")
     public ResponseEntity<String> getSimilarProducts(@PathVariable Integer productId){
-        val products = productService.getProducts(productId);
+        val products = productService.getSimilarProducts(productId.longValue());
+
         return ResponseEntity.ok("ok");
     }
 
