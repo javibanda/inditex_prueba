@@ -35,7 +35,6 @@ public class ZaraInitialConfigTest {
         Path tempFile = Files.createTempFile("events", ".csv");
         Files.write(tempFile, List.of("1,true,2022-01-01T00:00:00.000Z"));
 
-        zaraInitialConfig.init();
         zaraInitialConfig.run(tempFile.toString());
 
         verify(kafkaListener).KafkaConsumer();
