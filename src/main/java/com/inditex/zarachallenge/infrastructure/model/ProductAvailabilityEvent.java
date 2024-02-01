@@ -4,10 +4,10 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 
 @Builder
-@Data
+@Getter
 public class ProductAvailabilityEvent implements Serializable {
 
 	private static final long serialVersionUID = -6915528229848073283L;
