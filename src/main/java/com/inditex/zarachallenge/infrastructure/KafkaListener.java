@@ -1,16 +1,15 @@
 package com.inditex.zarachallenge.infrastructure;
 
-import java.util.function.Consumer;
-
+import com.inditex.zarachallenge.infrastructure.model.ProductAvailabilityEvent;
 import com.inditex.zarachallenge.mapper.SizeProductMapper;
+import com.inditex.zarachallenge.model.entity.SizeProduct;
 import com.inditex.zarachallenge.service.SizeProductService;
 import lombok.RequiredArgsConstructor;
-import lombok.val;
 import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
 
-import com.inditex.zarachallenge.infrastructure.model.ProductAvailabilityEvent;
+import java.util.function.Consumer;
 
 @Component
 @RequiredArgsConstructor
@@ -21,8 +20,8 @@ public class KafkaListener {
 	@Bean
 	public Consumer<Message<ProductAvailabilityEvent>> KafkaConsumer() {
 		return message -> {
-			val productAvailabilityEvent = message.getPayload();
-			val sizeProduct = sizeProductService.getSizeProduct(productAvailabilityEvent.getSizeId());
+			ProductAvailabilityEvent productAvailabilityEvent = message.getPayload();
+			SizeProduct sizeProduct = sizeProductService.getSizeProduct(productAvailabilityEvent.getSizeId());
 
 			if(sizeProduct != null){
 				sizeProductService.update(SizeProductMapper.updateEntity(productAvailabilityEvent, sizeProduct));
