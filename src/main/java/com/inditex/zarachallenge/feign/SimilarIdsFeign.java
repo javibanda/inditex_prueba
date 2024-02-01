@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 @FeignClient(
         name = "similarProductIds",
-        url = "localhost:3001"
+        url = "localhost:3000"
 )
 public interface SimilarIdsFeign {
 
